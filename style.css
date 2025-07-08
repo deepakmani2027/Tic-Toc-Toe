@@ -1,0 +1,166 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom right, #dd00ff, #0072ff);
+}
+
+.player{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+h1{
+    text-align: center;
+    font-family: "Raleway", sans-serif;
+    font-weight: bold;
+    color: rgb(0, 229, 255);
+    font-size: 40px;
+}
+
+#container{
+    background-color: rgba(64, 63, 63, 0.535);
+    padding: 20px 30px;
+    border-radius: 2ch;
+    box-shadow: 0 0 10px rgb(197, 195, 195);
+}
+
+.board{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3,1fr);
+    gap: 9px;
+}
+
+.box{
+    height: 100px;
+    width: 100px;
+    background-color: rgb(250, 250, 250);
+    border-radius: 1rem;
+    box-shadow: 2px 2px 3px rgb(200, 198, 198);
+    transition: all 0.2s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Raleway", sans-serif;
+    font-weight: bold;
+    font-size: 80px;
+    
+}
+
+#restart{
+    background-color: rgba(45, 229, 45, 0.87);
+    margin-top: 40px;
+    margin-left: 90px;
+    height: 40px;
+    width: 140px;
+    border: none;
+    border-radius: 1ch;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    transition: all 0.7s ease;
+}
+
+.box:hover{
+    background-color: rgb(226, 226, 226);
+}
+
+#message{
+    text-align: center;
+    color: white;
+    font-size: 1rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 0;
+}
+
+#restart:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 30px 5px green;
+}
+
+#pic{
+    width: 460px;
+    height: auto;
+    transition: all 1s ease;
+}
+
+#pic1{
+    width: 480px;
+    height: 510px;
+    transition: all 0.5s ease;
+}
+
+h2{
+    text-align: center;
+}
+
+h2{
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 2rem;
+}
+
+.o,.x{
+    background-color: rgba(45, 229, 45, 0.87);
+    width: 200px;
+    font-size: 25px;
+}
+
+.player1,.player2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+@media(max-width:700px){
+    .player{
+        flex-direction: column;
+    }
+    .player1{
+        position: absolute;
+        top: 63vh;
+        left: 0;
+    }
+    .player2{
+        position: absolute;
+        top: 63vh;
+        right: 0;
+    }
+    #pic{
+        width: 220px;
+    }
+    #pic1{
+        height: 280px;
+        width: 250px;
+    }
+    #container{
+        position: relative;
+        bottom: 9rem;
+    }
+}
+
+@media(max-width:425px) {
+    #pic{
+        width: 200px;
+    }
+    #pic1{
+        height: 250px;
+        width: 230px;
+    }
+    .player1{
+        position: absolute;
+        top: 66vh;
+        left: 0;
+    }
+    .player2{
+        position: absolute;
+        top: 66vh;
+        right: 0;
+    }
+    .o,.x{
+        width: 100px;
+    }
+}
